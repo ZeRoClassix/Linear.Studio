@@ -265,7 +265,7 @@ const PRODUCTS = [
     cat: "accounts",
     price: 7,
     img: "external/productsPIC/account/linearACC.png",
-    desc: "A non-first-account R6 Siege account, ready for ranked play the moment you log in. Fresh email included with full access.\n\nBypasses the new player grind so you can jump straight into competitive matchmaking. Replacement guaranteed within 24 hours if the account receives a temporary ban. Clean history, no prior suspensions, and ready to queue.",
+    desc: "A not full-access R6 Siege account, ready for ranked play the moment you log in. Fresh email included with full access.\n\nBypasses the new player grind so you can jump straight into competitive matchmaking. Replacement guaranteed within 24 hours if the account receives a temporary ban. Clean history, no prior suspensions, and ready to queue.",
     tags: ["NFA", "Ranked Ready", "Instant Delivery"],
     premium: false
   },
