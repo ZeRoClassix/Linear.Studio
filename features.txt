@@ -1,0 +1,620 @@
+========================================
+  PHOBIA STORE — ALL CHEAT FEATURES
+  (As shown in the Cheat Features panel)
+========================================
+
+Legend:
+  [Toggle]  = on/off switch
+  [Slider]  = adjustable value (min → max, default)
+  [Combo]   = dropdown selection
+  [Section] = divider/label
+
+
+========================================
+  GAMES TAB
+========================================
+
+
+=== LINEAR.CS2 (Counter-Strike 2) ===
+Price: $34.99
+Tags: Kernel, Undetected, Competitive
+
+Aiming:
+  [Toggle]  Enable Aimbot                    ON
+  [Toggle]  Silent Aim                       ON
+  [Toggle]  Aimlock                          OFF
+  [Slider]  FOV                              0-180°      (default: 96°)
+  [Slider]  Smoothness                       1-50        (default: 24)
+  [Combo]   Hitbox Priority                  Head / Chest / Pelvis
+  [Toggle]  Visible Check                    ON
+  [Toggle]  Team Check                       OFF
+  [Toggle]  Autowall                         OFF
+
+Triggerbot:
+  [Toggle]  Enable Triggerbot                OFF
+  [Slider]  Delay                            0-500ms     (default: 120ms)
+  [Combo]   Hitbox Selection                 Head / Chest
+  [Toggle]  Visible Check                    ON
+
+Visuals:
+  [Toggle]  Enable ESP                       ON
+  [Toggle]  Box ESP                          ON
+  [Combo]   Box Type                         2D / Corner
+  [Slider]  Box Thickness                    0.5-3       (default: 1.6)
+  [Toggle]  Skeleton ESP                     OFF
+  [Slider]  Skeleton Thickness               0.5-3       (default: 1.2)
+  [Toggle]  Player Info                      ON
+  [Toggle]  Health Bar                       ON
+  [Toggle]  Visible Check                    ON
+  [Toggle]  Team Check                       OFF
+  [Toggle]  Glow ESP                         OFF
+  [Toggle]  2D Radar                         OFF
+
+Weapon:
+  [Toggle]  Recoil / Spread Control          ON
+  [Slider]  Recoil Multiplier                0-1         (default: 0.42)
+  [Slider]  Spread Multiplier                0-1         (default: 0.51)
+  [Toggle]  Infinite Ammo                    OFF
+  [Slider]  FOV Changer                      60-300°     (default: 104°)
+  [Toggle]  Auto Melee                       OFF
+
+Movement:
+  [Toggle]  Bunny Hop                        OFF
+  [Toggle]  Auto Strafe                      OFF
+  [Toggle]  Edge Jump                        OFF
+  [Toggle]  Fast Crouch                      OFF
+
+Misc / Unlocks:
+  [Toggle]  Unlock All Agents                OFF
+  [Toggle]  Unlock All Skins                 OFF
+
+Config:
+  [Toggle]  Load / Save Config               OFF
+  [Toggle]  Keybind: Aimbot                  OFF
+  [Toggle]  Keybind: Triggerbot              OFF
+  [Toggle]  Keybind: ESP Toggle              OFF
+
+
+=== LINEAR.VAL (Valorant) ===
+Price: $49.99
+Tags: Weekly Rebuilds, Anti-cheat Safe, Tactical
+
+Aiming:
+  [Toggle]  Enable Aimbot                    ON
+  [Toggle]  Silent Aim                       OFF
+  [Toggle]  Aimlock                          OFF
+  [Slider]  FOV                              0-180°      (default: 96°)
+  [Slider]  Smoothness                       1-50        (default: 24)
+  [Combo]   Hitbox Priority                  Head / Neck / Chest / Pelvis
+  [Toggle]  Visible Check                    ON
+  [Toggle]  Team Check                       OFF
+  [Toggle]  Autowall                         OFF
+
+Triggerbot:
+  [Toggle]  Enable Triggerbot                OFF
+  [Slider]  Delay                            0-500ms     (default: 120ms)
+  [Combo]   Hitbox Selection                 Head / Chest
+  [Toggle]  Visible Check                    ON
+
+Visuals:
+  [Toggle]  Enable ESP                       ON
+  [Toggle]  Box ESP                          ON
+  [Combo]   Box Type                         2D / Corner
+  [Slider]  Box Thickness                    0.5-3       (default: 1.6)
+  [Toggle]  Skeleton ESP                     OFF
+  [Slider]  Skeleton Thickness               0.5-3       (default: 1.2)
+  [Toggle]  Player Info                      ON
+  [Toggle]  Health Bar                       OFF
+  [Toggle]  Visible Check                    ON
+  [Toggle]  Team Check                       OFF
+  [Toggle]  Glow ESP                         OFF
+  [Toggle]  2D Radar                         OFF
+  [Toggle]  Ability ESP                      OFF
+
+Weapon:
+  [Toggle]  Recoil / Spread Control          ON
+  [Slider]  Recoil Multiplier                0-1         (default: 0.42)
+  [Slider]  Spread Multiplier                0-1         (default: 0.51)
+  [Toggle]  Infinite Ammo                    OFF
+  [Slider]  FOV Changer                      60-300°     (default: 104°)
+  [Toggle]  Auto Melee                       OFF
+  [Toggle]  Long Melee                       OFF
+
+Movement:
+  [Toggle]  Bunny Hop                        OFF
+  [Toggle]  Auto Strafe                      OFF
+
+Misc:
+  [Toggle]  Custom Crosshair                 OFF
+  [Combo]   Crosshair Color                  Cyan / Green / White / Pink
+  [Combo]   Crosshair Type                   X / Circle / Dot / Line
+  [Toggle]  No Flash                         OFF
+  [Toggle]  Thirdperson                      OFF
+  [Toggle]  OBS Hide                         OFF
+
+Config:
+  [Toggle]  Load / Save Config               OFF
+  [Toggle]  Keybind: Aimbot                  OFF
+  [Toggle]  Keybind: Triggerbot              OFF
+  [Toggle]  Keybind: ESP Toggle              OFF
+
+
+=== LINEAR.RUST (Rust) ===
+Price: $29.99
+Tags: ESP, Silent, Recoil
+
+Aiming:
+  [Toggle]  Enable Aimbot                    ON
+  [Toggle]  Silent Aim                       OFF
+  [Slider]  FOV                              0-180°      (default: 96°)
+  [Slider]  Smoothness                       1-50        (default: 24)
+  [Combo]   Hitbox Priority                  Head / Neck / Chest / Pelvis / Legs
+  [Toggle]  Visible Check                    ON
+  [Toggle]  Team Check                       OFF
+  [Toggle]  Autowall                         OFF
+
+Visuals:
+  [Toggle]  Enable ESP                       OFF
+  --- Player ESP ---
+  [Toggle]  Player ESP                       ON
+  [Combo]   Box Type                         2D / Corner
+  [Toggle]  Skeleton                         ON
+  [Toggle]  Player Info                      OFF
+  [Toggle]  Health Bar                       ON
+  [Toggle]  Glow                             OFF
+  --- Animal ESP ---
+  [Toggle]  Animal Box                       ON
+  [Toggle]  Animal Name                      OFF
+  [Toggle]  Animal Distance                  ON
+  [Toggle]  Animal Health                    OFF
+  --- Resource ESP ---
+  [Toggle]  Nodes (Stone / Metal / Sulfur)   ON
+  [Toggle]  Wood Piles                       OFF
+  [Toggle]  Hemp                             OFF
+  [Toggle]  Icons + Distance                 ON
+  --- World ESP ---
+  [Toggle]  Crate / Barrel ESP               ON
+  [Toggle]  Dropped Item ESP                 OFF
+  [Toggle]  Turret / Trap ESP                ON
+  [Toggle]  Building Part ESP                OFF
+  [Toggle]  2D Radar                         OFF
+  [Toggle]  Visible Check                    OFF
+  [Toggle]  Team Check                       OFF
+
+Weapon & Recoil:
+  [Toggle]  Recoil / Spread Control          ON
+  [Slider]  Recoil Multiplier                0-1         (default: 0.42)
+  [Slider]  Spread Multiplier                0-1         (default: 0.51)
+  [Toggle]  No Weapon Sway                   OFF
+  [Toggle]  Infinite Ammo                    OFF
+  [Slider]  FOV Changer                      60-120°     (default: 104°)
+
+Misc / Automation:
+  [Toggle]  Auto Farm                        OFF
+  [Toggle]  Auto Gather                      OFF
+  [Toggle]  Auto Loot                        OFF
+  [Toggle]  Auto Heal                        OFF
+  [Toggle]  Auto Repair                      OFF
+  [Toggle]  Unlock All Skins                 OFF
+  [Toggle]  Crosshair Changer                OFF
+  [Toggle]  No Flash                         OFF
+  [Toggle]  Kill Feed Muter                  OFF
+
+Config:
+  [Toggle]  Load / Save Config               OFF
+  [Toggle]  Keybind: Aimbot                  OFF
+  [Toggle]  Keybind: ESP Toggle              OFF
+  [Toggle]  Keybind: Auto Farm               OFF
+
+
+=== LINEAR.EFT (Escape from Tarkov) ===
+Price: $44.99
+Tags: Radar, Prediction, Hardcore
+
+Aiming:
+  [Toggle]  Enable Aimbot                    ON
+  [Toggle]  Silent Aim                       ON
+  [Slider]  FOV                              0-180°      (default: 45°)
+  [Slider]  Smoothness                       1-50        (default: 12)
+  [Combo]   Hitbox Priority                  Head / Neck / Chest / Stomach / Legs / Arms
+  [Toggle]  Visible Check                    ON
+  [Toggle]  Team Check                       OFF
+  [Toggle]  Autowall                         OFF
+
+Triggerbot:
+  [Toggle]  Enable Triggerbot                OFF
+  [Slider]  Delay                            0-500ms     (default: 80ms)
+  [Combo]   Hitbox Selection                 Head / Chest
+  [Toggle]  Visible Check                    ON
+  [Toggle]  Burst Mode                       OFF
+
+Visuals:
+  [Toggle]  Enable ESP                       ON
+  --- Player ESP ---
+  [Toggle]  Player ESP                       ON
+  [Combo]   Box Type                         2D / Corner
+  [Toggle]  Skeleton                         OFF
+  [Toggle]  Player Info                      ON
+  [Toggle]  Health Bar                       ON
+  [Toggle]  Armor Bar                        OFF
+  [Toggle]  Glow                             OFF
+  --- Scav ESP ---
+  [Toggle]  Scav Box                         ON
+  [Toggle]  Scav Name                        OFF
+  [Toggle]  Scav Health                      OFF
+  [Toggle]  Scav Weapon                      OFF
+  [Toggle]  Scav Distance                    OFF
+  --- Boss ESP ---
+  [Toggle]  Boss Highlight                   ON
+  [Toggle]  Boss Icon                        OFF
+  [Toggle]  Boss Name                        OFF
+  --- Loot ESP ---
+  [Toggle]  Loose Loot                       ON
+  [Combo]   Loot Rarity                      All / Rare+ / Epic+ / Legendary
+  [Toggle]  Loot Name                        ON
+  [Toggle]  Loot Distance                    ON
+  --- Container ESP ---
+  [Toggle]  Weapon Crates                    OFF
+  [Toggle]  Duffle Bags                      OFF
+  [Toggle]  Filing Cabinets                  OFF
+  [Toggle]  Jackets                          OFF
+  [Toggle]  Container Icons                  ON
+  --- World ESP ---
+  [Toggle]  Exfil / Extract                  ON
+  [Toggle]  Exfil Status                     ON
+  [Toggle]  Exfil Timer                      OFF
+  [Toggle]  Airdrop ESP                      OFF
+  [Toggle]  Grenade Indicator                OFF
+  [Toggle]  2D Radar                         OFF
+  [Toggle]  Visible Check                    ON
+
+Weapon & Recoil:
+  [Toggle]  Recoil / Spread Control          ON
+  [Slider]  Recoil Multiplier                0-1         (default: 0.45)
+  [Slider]  Spread Multiplier                0-1         (default: 0.50)
+  [Toggle]  No Weapon Sway                   OFF
+  [Toggle]  Infinite Ammo                    OFF
+  [Slider]  FOV Changer                      60-120°     (default: 100°)
+
+Misc / Automation:
+  [Toggle]  Auto Loot                        OFF
+  [Toggle]  Fast Search                      OFF
+  [Toggle]  Auto Heal                        OFF
+  [Toggle]  Auto Repair                      OFF
+
+Config:
+  [Toggle]  Load / Save Config               OFF
+  [Toggle]  Keybind: Aimbot                  OFF
+  [Toggle]  Keybind: ESP Toggle              OFF
+  [Toggle]  Keybind: Auto Loot               OFF
+
+
+=== LINEAR.R6 (Rainbow Six Siege) ===
+Price: $44.99
+Tags: Legacy, Undetected, Siege
+
+Aiming:
+  [Toggle]  Enable Aimbot                    ON
+  [Toggle]  Silent Aim                       OFF
+  [Slider]  FOV                              0-180°      (default: 90°)
+  [Slider]  Smoothness                       1-50        (default: 18)
+  [Toggle]  Visible Check                    ON
+  [Toggle]  Team Check                       OFF
+  [Combo]   Hitbox Priority                  Head / Neck / Chest / Pelvis
+
+Triggerbot:
+  [Toggle]  Enable Triggerbot                OFF
+  [Slider]  Delay                            0-500ms     (default: 60ms)
+  [Toggle]  Visible Check                    ON
+  [Toggle]  Team Check                       OFF
+
+Visuals:
+  [Toggle]  Enable ESP                       ON
+  [Toggle]  Box ESP                          ON
+  [Toggle]  Skeleton ESP                     OFF
+  [Combo]   Box Type                         2D / 3D / Corner
+  [Toggle]  Gadget Highlight                 OFF
+  [Toggle]  Visible Check                    ON
+  [Toggle]  Team Check                       OFF
+  [Toggle]  2D Radar                         OFF
+
+Weapon & Recoil:
+  [Toggle]  Recoil / Spread Control          ON
+  [Slider]  Recoil Multiplier                0-1         (default: 0.42)
+  [Slider]  Spread Multiplier                0-1         (default: 0.51)
+
+Misc:
+  [Toggle]  Long Melee                       OFF
+  [Toggle]  Anti Aim                         OFF
+  [Combo]   Anti-Aim Direction               Forward / Sideways / Spin
+  [Slider]  Spin Speed                       0-100       (default: 36)
+  [Toggle]  OBS Hider                        OFF
+
+Config:
+  [Toggle]  Load / Save Config               OFF
+  [Toggle]  Keybind: Aimbot                  OFF
+  [Toggle]  Keybind: ESP Toggle              OFF
+
+
+=== LINEAR.APEX (Apex Legends) ===
+Price: $27.99
+Tags: Silent Aim, No-Recoil, Movement
+
+Aiming:
+  [Toggle]  Enable Aimbot                    ON
+  [Toggle]  Silent Aim                       OFF
+  [Toggle]  Aimlock                          OFF
+  [Slider]  FOV                              0-180°      (default: 90°)
+  [Slider]  Smoothness                       1-50        (default: 20)
+  [Combo]   Hitbox Priority                  Head / Neck / Chest / Stomach / Legs
+  [Toggle]  Visible Check                    ON
+  [Toggle]  Team Check                       OFF
+  [Combo]   Target Selection                 Closest / Lowest HP / Most HP / Random
+  [Toggle]  Bullet Drop Compensation         OFF
+
+Visuals:
+  [Toggle]  Enable ESP                       ON
+  --- Player ESP ---
+  [Toggle]  Player ESP                       ON
+  [Combo]   Box Type                         2D / Corner / 3D
+  [Toggle]  Skeleton ESP                     OFF
+  [Toggle]  Player Info                      ON
+  [Toggle]  Health Bar                       ON
+  [Toggle]  Shield Bar                       OFF
+  [Toggle]  Glow ESP                         OFF
+  --- Legend ESP ---
+  [Toggle]  Legend Name                      ON
+  [Toggle]  Legend Icon                      ON
+  --- Loot ESP ---
+  [Toggle]  Ground Loot                      ON
+  [Combo]   Loot Rarity                      All / Rare+ / Epic+ / Legendary
+  [Toggle]  Loot Name                        ON
+  [Toggle]  Loot Distance                    ON
+  --- World ESP ---
+  [Toggle]  Deathbox ESP                     ON
+  [Toggle]  Care Package ESP                 OFF
+  [Toggle]  Survey Beacon ESP                OFF
+  [Toggle]  Replicator ESP                   OFF
+  [Toggle]  2D Radar                         OFF
+  [Toggle]  Visible Check                    ON
+  [Toggle]  Team Check                       OFF
+
+Weapon & Recoil:
+  [Toggle]  Recoil / Spread Control          ON
+  [Slider]  Recoil Multiplier                0-1         (default: 0.42)
+  [Slider]  Spread Multiplier                0-1         (default: 0.51)
+  [Toggle]  Infinite Ammo (Server Side)       OFF
+  [Slider]  FOV Changer                      70-120°     (default: 104°)
+
+Movement:
+  [Toggle]  Bunny Hop                        OFF
+  [Toggle]  Auto Strafe                      OFF
+  [Toggle]  Zip Line Speed Boost             OFF
+
+Misc / Automation:
+  [Toggle]  Auto Loot                        ON
+  [Toggle]  Auto Heal                        OFF
+  [Toggle]  Auto Shield                      OFF
+  [Toggle]  Auto Pickup (Weapons)            OFF
+  [Toggle]  Unlock All Legends (Server Side)  OFF
+
+Config:
+  [Toggle]  Load / Save Config               OFF
+  [Toggle]  Keybind: Aimbot                  OFF
+  [Toggle]  Keybind: ESP Toggle              OFF
+  [Toggle]  Keybind: Auto Loot               OFF
+
+
+========================================
+  PHOBIA TAB
+========================================
+
+
+=== PHOBIA CLIENT EXTERNAL (Rainbow Six Siege) ===
+Price: $74.99
+Tags: PHOBIA ERA, External, Undetected
+
+Aiming:
+  [Toggle]  Enable Aimbot                    ON
+  [Toggle]  Silent Aim                       OFF
+  [Toggle]  Aimlock                          OFF
+  [Slider]  FOV                              0-180°      (default: 96°)
+  [Slider]  Smoothness                       1-100       (default: 42.5)
+  [Slider]  Smooth Curve                     0.5-3       (default: 1.8)
+  [Toggle]  Randomize Smoothness             OFF
+  [Slider]  Random Range                     0-10        (default: 6.4)
+  [Toggle]  Visible Check                    OFF
+  [Toggle]  Autowall                         OFF
+  [Toggle]  Team Check                       OFF
+  [Combo]   Hitbox Priority                  Head / Neck / Chest / Pelvis
+
+Triggerbot:
+  [Toggle]  Enable Triggerbot                OFF
+  [Slider]  Delay                            0-1s        (default: 0.15s)
+  [Combo]   Hitbox                           Head / Neck / Chest / Pelvis
+  [Toggle]  Visible Check                    ON
+  [Toggle]  Team Check                       ON
+  [Toggle]  Autowall                         OFF
+  [Slider]  FOV                              0-360°      (default: 90°)
+  [Toggle]  Hold Mode                        ON
+  [Combo]   Triggerbot Key                   TAB / SHIFT / ALT / F / MOUSE5
+
+Visuals:
+  [Toggle]  Enable ESP                       ON
+  [Toggle]  Box ESP                          ON
+  [Toggle]  Skeleton ESP                     ON
+  [Toggle]  Player Info                      ON
+  [Toggle]  Visible Check                    ON
+  [Toggle]  Team Check                       ON
+  [Toggle]  Outlines                         OFF
+  [Toggle]  2D Radar                         ON
+  [Slider]  Box Thickness                    0.5-3       (default: 1.6)
+  [Slider]  Skeleton Thickness               0.5-3       (default: 1.2)
+  [Slider]  Radar Size                       80-250      (default: 160)
+  [Slider]  Radar Range                      20-100m     (default: 60m)
+  [Combo]   ESP Type                         2D Box / Corner Box / 3D Box / All
+
+Weapon:
+  [Slider]  Recoil Multiplier                0-1         (default: 0.42)
+  [Slider]  Spread Multiplier                0-1         (default: 0.51)
+  [Toggle]  Recoil / Spread Control          OFF
+  [Toggle]  Infinite Ammo                    OFF
+  [Toggle]  Auto Melee                       OFF
+  [Toggle]  FOV Changer                      OFF
+  [Slider]  FOV Value                        60-350°     (default: 104°)
+
+Unlocks:
+  [Toggle]  Unlock All Operators             OFF
+
+Config:
+  [Toggle]  Save / load configs              OFF
+  [Toggle]  Apply and restore settings       OFF
+
+
+=== PHOBIA EXTERNAL (Universal Overlay Framework) ===
+Price: $89.99
+Tags: PHOBIA ERA, DX12 / DX11 / DX9, Source
+
+Rendering:
+  [Toggle]  DX12 Render Path                 ON
+  [Toggle]  DX11 Render Path                 ON
+  [Toggle]  DX9 Render Path                  OFF
+  [Toggle]  Overlay Runtime                  ON
+  [Toggle]  External Execution Mode          OFF
+
+Hooking:
+  [Toggle]  Internal Hooking                 ON
+  [Toggle]  Clean Documented API             OFF
+  [Toggle]  Automatic Hook Restoration       OFF
+  [Toggle]  Multiple Hooking Methods         OFF
+
+Tools & Integration:
+  [Toggle]  Full Source Code                 ON
+  [Toggle]  Zero Watermarks                  ON
+  [Toggle]  Zero Telemetry                   ON
+  [Toggle]  FIBERNETIC Included              ON
+  [Toggle]  Commented Core Files             OFF
+  [Toggle]  Dedicated Support Channel        OFF
+
+Anti-Detection:
+  [Toggle]  FIBERNETIC Anti-Detection        ON
+  [Toggle]  Multiple Execution Paths         OFF
+  [Toggle]  Regular Updates                  OFF
+
+Delivery & Source:
+  [Toggle]  Full Source Provided             OFF
+  [Toggle]  Private Build Channel Access     OFF
+  [Toggle]  Regular Updates                  ON
+
+Config:
+  [Toggle]  Load / Save Config               ON
+  [Toggle]  Customizable Hotkeys             OFF
+  [Toggle]  Optional Logging                 OFF
+
+
+========================================
+  SPOOFER TAB
+========================================
+
+
+=== LINEAR.HWID ===
+Price: $24.99
+Tags: Motherboard, Ban-wave Proof, Reinstall Safe
+
+System Spoofing:
+  [Toggle]  Motherboard Serial Spoofing      ON
+  [Toggle]  Volume Serial Spoofing           ON
+  [Toggle]  Disk ID Spoofing                 ON
+  [Toggle]  GPU ID Spoofing                  OFF
+  [Toggle]  Network Adapter MAC Spoofing     OFF
+
+Persistence & Recovery:
+  [Toggle]  Reboot-Persistent                ON
+  [Toggle]  OS Reinstall Survival            OFF
+  [Toggle]  Restore Original                 OFF
+
+Interface & Control:
+  [Toggle]  Dashboard                        ON
+  [Toggle]  Randomize All                    OFF
+  [Toggle]  Selective Randomization          ON
+  [Toggle]  Config Profiles                  OFF
+
+Additional Features:
+  [Toggle]  Boot-Time Injection              ON
+  [Toggle]  Minimal Resource Usage           ON
+
+Config:
+  [Toggle]  Load / Save Config               OFF
+  [Toggle]  Logging                          OFF
+
+
+=== LINEAR.SPOOFER+ ===
+Price: $39.99
+Tags: Bundle, Best Value, BattlEye
+
+System Spoofing:
+  [Toggle]  Motherboard Serial Spoofing      ON
+  [Toggle]  Volume Serial Spoofing           ON
+  [Toggle]  Disk ID Spoofing                 ON
+  [Toggle]  GPU ID Spoofing                  OFF
+  [Toggle]  Network Adapter MAC Spoofing     OFF
+
+Persistence & Recovery:
+  [Toggle]  Reboot-Persistent                ON
+  [Toggle]  OS Reinstall Survival            OFF
+  [Toggle]  Restore Original                 OFF
+
+Interface & Control:
+  [Toggle]  Dashboard                        ON
+  [Toggle]  Randomize All                    OFF
+  [Toggle]  Selective Randomization          ON
+  [Toggle]  Config Profiles                  OFF
+
+Additional Features:
+  [Toggle]  Boot-Time Injection              ON
+  [Toggle]  Minimal Resource Usage           ON
+
+BattlEye Bypass:
+  --- BATTLEYE BYPASS ---
+  Auto-updating if patched. No manual intervention needed.
+  Signature-level injection with kernel driver support.
+  Zero leftover drivers. Clean removal on exit.
+
+Config:
+  [Toggle]  Load / Save Config               OFF
+  [Toggle]  Logging                          OFF
+
+
+========================================
+  AC BYPASS TAB
+========================================
+
+
+=== BATTLEYE BYPASS ===
+Price: $19.99
+Tags: BattlEye, Fast Re-sign, Kernel
+
+Bypass:
+  [Toggle]  Signature-level Bypass           OFF
+  [Toggle]  Hours-fast Re-sign               OFF
+  [Toggle]  Kernel Loaded                    OFF
+
+Ops:
+  [Toggle]  No Leftover Drivers              OFF
+  [Toggle]  Telemetry Stealth                OFF
+  [Toggle]  OpSec Guide                      OFF
+
+
+=== EAC BYPASS ===
+Price: $19.99
+Tags: EAC, Kernel, Stealth
+
+Bypass:
+  [Toggle]  Driver-based Bypass              OFF
+  [Toggle]  HVCI Compatible                  OFF
+  [Toggle]  Fast Re-sign                     OFF
+
+Ops:
+  [Toggle]  No Telemetry Leaks               OFF
+  [Toggle]  One-click Activation             OFF
+  [Slider]  Re-sign Window                   1-24h       (default: 6h)

@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linear Studio — Cheating Excellence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+
+<div class="noise"></div>
+
+<header class="header" id="header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-logo" id="logo-slot" title="Linear Studio">
+        <span class="linear-logo" role="img" aria-label="Linear Studio" style="-webkit-mask:url('external/linearLOGO.png') center/contain no-repeat;mask:url('external/linearLOGO.png') center/contain no-repeat"></span>
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">Linear Studio</span>
+        <span class="brand-tag">Cheating Excellence</span>
+      </div>
+    </div>
+
+    <nav class="nav" id="nav">
+      <a href="#" class="nav-link active" data-page="home">Home</a>
+      <a href="#" class="nav-link" data-page="products">Products</a>
+      <a href="#" class="nav-link" data-page="status">Status</a>
+      <a href="#" class="nav-link" data-page="reviews">Reviews</a>
+      <span class="nav-ind" id="nav-ind"></span>
+    </nav>
+
+    <div class="actions">
+      <button class="btn btn-ghost btn-cart" id="cart-btn" title="Cart">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 4h2l2.4 12.2a1.5 1.5 0 0 0 1.47 1.3h8.86a1.5 1.5 0 0 0 1.46-1.17L21 8H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="9.5" cy="21" r="1.3" fill="currentColor"/>
+          <circle cx="17.5" cy="21" r="1.3" fill="currentColor"/>
+        </svg>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+      <a class="btn btn-discord" href="#" id="discord-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.32 4.37a19.8 19.8 0 0 0-4.89-1.52.07.07 0 0 0-.08.04c-.21.38-.44.87-.6 1.25a18.3 18.3 0 0 0-5.5 0 12.6 12.6 0 0 0-.61-1.25.08.08 0 0 0-.08-.04 19.7 19.7 0 0 0-4.88 1.52.07.07 0 0 0-.04.03C.53 9.05-.32 13.58.1 18.06c0 .02.01.04.03.05a19.9 19.9 0 0 0 6 3.03.08.08 0 0 0 .08-.02c.46-.63.87-1.3 1.22-2 .02-.04 0-.08-.04-.1a13 13 0 0 1-1.87-.9.08.08 0 0 1-.01-.12c.13-.1.25-.19.37-.29a.07.07 0 0 1 .08-.01 14.2 14.2 0 0 0 12.08 0 .07.07 0 0 1 .08.01c.12.1.25.2.37.29a.08.08 0 0 1-.01.13c-.6.35-1.22.64-1.88.89a.08.08 0 0 0-.04.1c.36.7.77 1.37 1.22 2 .02.03.04.04.08.03a19.8 19.8 0 0 0 6.02-3.03.08.08 0 0 0 .03-.05c.5-5.2-.84-9.68-3.55-13.66a.06.06 0 0 0-.03-.03zM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.96 2.42-2.16 2.42zm7.96 0c-1.18 0-2.15-1.08-2.15-2.42 0-1.33.95-2.42 2.15-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.95 2.42-2.16 2.42z"/>
+        </svg>
+        Discord
+      </a>
+      <div class="currency-wrap" id="currency-wrap">
+        <button class="btn btn-currency" id="currency-btn">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 6v12M9 8.5c0-1 1.3-2 3-2s3 1 3 2-1.3 2-3 2-3 1-3 2 1.3 2 3 2 3-1 3-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span id="currency-label">EUR</span>
+          <svg class="currency-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="currency-dropdown" id="currency-dropdown">
+          <button class="currency-option" data-cur="EUR">€ EUR</button>
+          <button class="currency-option" data-cur="USD">$ USD</button>
+          <button class="currency-option" data-cur="GBP">£ GBP</button>
+        </div>
+      </div>
+      <a class="btn btn-primary btn-dash" href="#" id="dashboard-btn">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="7" height="9" rx="1.5" stroke="currentColor" stroke-width="1.8"/>
+          <rect x="14" y="3" width="7" height="5" rx="1.5" stroke="currentColor" stroke-width="1.8"/>
+          <rect x="14" y="12" width="7" height="9" rx="1.5" stroke="currentColor" stroke-width="1.8"/>
+          <rect x="3" y="16" width="7" height="5" rx="1.5" stroke="currentColor" stroke-width="1.8"/>
+        </svg>
+        Dashboard
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- HOME -->
+  <section class="page active" id="page-home">
+    <div class="hero">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        System Operational
+      </div>
+      <h1 class="hero-title">Undetectable.<br><span class="grad">Unbeatable.</span></h1>
+      <p class="hero-sub">
+        Premium game cheats engineered for the highest level of play.
+        Private kernels, silent aim, and radar that sees what others can't.
+      </p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary btn-lg" data-goto="products">Browse Products</a>
+        <a href="#" class="btn btn-ghost btn-lg" data-goto="status">View Status</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" data-count="12480">0</span><span class="stat-label">Active Users</span></div>
+        <div class="stat"><span class="stat-num" data-count="99.7">0</span><span class="stat-label">Uptime %</span></div>
+        <div class="stat"><span class="stat-num" data-count="36">0</span><span class="stat-label">Days Undetected</span></div>
+      </div>
+    </div>
+
+    <div class="home-block">
+      <span class="section-label">Core Features</span>
+      <h2 class="section-title">What you receive with every product</h2>
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3l7 4v5c0 4.4-3 8.2-7 9-4-.8-7-4.6-7-9V7l7-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Kernel-Level Security</h3>
+          <p>Signed drivers and memory spoofing keep you invisible through every session.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="12" cy="12" r="1.2" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Real-Time Radar</h3>
+          <p>Every enemy, every utility, every flank — rendered before it happens.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Instant Updates</h3>
+          <p>Game patches don't slow us down. Updates ship within hours, not days.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 21s-7-4.6-9.5-9C1 9 3 5 6.5 5c2 0 3.5 1 4.5 2.6V4h2v3.6C14 6 15.5 5 17.5 5 21 5 23 9 22.5 12c-2.5 4.4-10.5 9-10.5 9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Lifetime Warranty</h3>
+          <p>One purchase. Every future update. No subscriptions, no resellers.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-block">
+      <span class="section-label">Categories</span>
+      <h2 class="section-title">Browse current categories</h2>
+      <div class="category-grid">
+        <div class="category-card" style="background-image: url('external/small containers/linearR6SMALL.png')">
+          <span class="cat-label">GAMES</span>
+        </div>
+        <div class="category-card" style="background-image: url('external/small containers/linearMOBO.png')">
+          <span class="cat-label">SPOOFER</span>
+        </div>
+        <div class="category-card" style="background-image: url('external/small containers/linearACC.png')">
+          <span class="cat-label">ACCOUNTS</span>
+        </div>
+        <div class="category-card" style="background-image: url('external/small containers/linearBE.png')">
+          <span class="cat-label">AC BYPASS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-block about-block">
+      <div class="about-text">
+        <span class="section-label">Linear Studio</span>
+        <h2 class="section-title">One studio. Every game. Zero compromises.</h2>
+        <p class="about-story">
+          Linear Studio was founded in late 2025 as the direct continuation of Zenite Services, a name many of you remember from the start. Zenite was established in early 2025 with a single focus: undetectable, high-performance cheats for Rainbow Six Siege. It earned a big and loyal following, built on one promise: software that holds, updates that land, and support that actually answers.
+        </p>
+        <p class="about-story">
+          When the time came to grow, we didn't just rebrand the product, we rebuilt the house around it. Linear Studio carries Zenite's DNA forward and expands it across the entire competitive landscape: CS2, Valorant, Rust, Fortnite, Escape from Tarkov, Apex Legends and more, all under one roof, one loader, one lifetime model. The kernel engine is our own. The feature stack is our own. The update pipeline ships within hours of a patch, not days. Nothing is outsourced, nothing is rented, which is precisely why nothing leaks.
+        </p>
+        <p class="about-story">
+          We're not the biggest storefront yet and that's intentional for now. We build what we ship, we ship what works, and we don't disappear after your payment clears.
+        </p>
+      </div>
+      <div class="about-marquee">
+        <div class="marquee-mask games-mask">
+          <div class="marquee-row" id="game-row" style="--speed: 36s"></div>
+        </div>
+        <div class="marquee-mask chips-mask">
+          <div class="marquee-row" id="chip-row" style="--speed: 48s"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-block reviews-block">
+      <span class="section-label">Our Reviews</span>
+      <h2 class="section-title">Customer vouches &amp; testimonials</h2>
+      <div class="marquee-mask reviews-mask">
+        <div class="reviews-marquee" id="reviews-marquee"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="page" id="page-products">
+    <div class="page-head">
+      <h2 class="page-title">Products</h2>
+      <p class="page-sub">Select a license. Lifetime keys include all future updates.</p>
+    </div>
+    <div class="cat-bar" id="category-tabs"></div>
+    <div class="product-grid" id="product-grid"></div>
+  </section>
+
+  <!-- PRODUCT DETAIL -->
+  <section class="page" id="page-product">
+    <div class="pv-wrap">
+      <a href="#" class="pv-back">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to Products
+      </a>
+      <div class="pm-grid">
+        <div class="pm-media pv-media">
+          <div class="pm-stage">
+            <img class="pm-img pv-img" alt="">
+            <div class="pm-icon-fallback pv-icon-fallback" hidden></div>
+            <button class="pm-arrow pv-arrow pv-prev" title="Previous">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="pm-arrow pv-arrow pv-next" title="Next">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="pm-dots pv-dots"></div>
+          </div>
+        </div>
+        <div class="pm-info pv-info">
+          <span class="pm-cat pv-cat"></span>
+          <h3 class="pm-name pv-name"></h3>
+          <div class="pm-keys pv-keys"></div>
+          <div class="pm-price-row">
+            <span class="pm-price pv-price"></span>
+            <span class="pm-price-hint pv-price-hint"></span>
+          </div>
+          <button class="btn btn-lg btn-primary pm-checkout pv-checkout">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4h2l2.4 12.2a1.5 1.5 0 0 0 1.47 1.3h8.86a1.5 1.5 0 0 0 1.46-1.17L21 8H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="21" r="1.3" fill="currentColor"/><circle cx="17.5" cy="21" r="1.3" fill="currentColor"/></svg>
+            Add to Cart
+          </button>
+          <div class="pm-badges">
+            <span class="pm-badge"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Instant delivery</span>
+            <span class="pm-badge"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l7 4v5c0 4.4-3 8.2-7 9-4-.8-7-4.6-7-9V7l7-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Secure checkout</span>
+            <span class="pm-badge"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21s-7-4.6-9.5-9C1 9 3 5 6.5 5c2 0 3.5 1 4.5 2.6V4h2v3.6C14 6 15.5 5 17.5 5 21 5 23 9 22.5 12c-2.5 4.4-10.5 9-10.5 9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>24/7 support</span>
+          </div>
+        </div>
+      </div>
+      <div class="pm-bottom pv-bottom">
+        <section class="pm-sec">
+          <h4 class="pm-desc-title">About</h4>
+          <p class="pm-desc pv-desc"></p>
+        </section>
+        <section class="pm-sec pm-sec-reqs">
+          <h4 class="pm-reqs-title">Requirements</h4>
+          <div class="req-grid" id="pv-reqs"></div>
+        </section>
+        <section class="pm-sec">
+          <h4 class="pm-feats-title">Features</h4>
+          <ul class="pm-feats pv-feats"></ul>
+        </section>
+        <section class="pm-sec pm-sec-faq">
+          <h4 class="pm-faq-title">FAQ</h4>
+          <div class="faq-list" id="pv-faq"></div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATUS -->
+  <section class="page" id="page-status">
+    <div class="page-head">
+      <h2 class="page-title">System Status</h2>
+      <p class="page-sub">Live telemetry from our infrastructure. Updated every 30 seconds.</p>
+    </div>
+    <div class="status-cols">
+      <div class="status-wrap">
+      <div class="status-hero">
+        <div class="status-ring" id="status-ring"><span class="ring-core"></span><span class="ring-orbit"></span></div>
+        <div class="status-hero-info">
+          <div class="status-live">
+            <span class="live-dot"></span>
+            <span class="live-label">LIVE</span>
+            <span class="live-sep">·</span>
+            <span class="live-updated" id="live-updated">updated 0s ago</span>
+          </div>
+          <span class="status-pill" id="status-pill">All Systems Operational</span>
+          <span class="status-uptime" id="status-uptime">0.00% uptime — 30d</span>
+        </div>
+        <div class="status-quick">
+          <div class="q-stat"><b id="q-up">0/6</b><span>systems up</span></div>
+          <div class="q-stat"><b id="q-ms">0ms</b><span>avg latency</span></div>
+          <div class="q-stat"><b>7 Sept</b><span>last incident</span></div>
+        </div>
+      </div>
+      <div class="status-grid" id="status-grid"></div>
+      <div class="status-history">
+        <h3 class="status-h">Past Incidents</h3>
+        <div class="inc-timeline">
+          <div class="incident">
+            <span class="inc-dot open"></span>
+            <div><strong>Backend service degradation</strong><span class="inc-meta">Investigating — 07 Sept 2026 · Ongoing</span></div>
+          </div>
+          <div class="incident">
+            <span class="inc-dot resolved"></span>
+            <div><strong>Auth API latency spike</strong><span class="inc-meta">Resolved — 12 Aug 2026 · 14 min</span></div>
+          </div>
+          <div class="incident">
+            <span class="inc-dot resolved"></span>
+            <div><strong>Payment webhook delay</strong><span class="inc-meta">Resolved — 02 Aug 2026 · 8 min</span></div>
+          </div>
+          <div class="incident">
+            <span class="inc-dot resolved"></span>
+            <div><strong>CDN maintenance window</strong><span class="inc-meta">Resolved — 27 Jul 2026 · 45 min</span></div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <aside class="det-panel">
+        <div class="det-head">
+          <div>
+            <h3 class="det-title">Cheat Detection</h3>
+            <span class="det-sub">Anti-cheat telemetry · refreshed hourly</span>
+          </div>
+          <span class="det-live"><span class="live-dot"></span>LIVE</span>
+        </div>
+        <div class="det-summary">
+          <div class="det-score">
+            <b id="det-count">0/8</b>
+            <span class="det-score-label">undetected</span>
+          </div>
+          <div class="det-bar"><i id="det-bar-fill"></i></div>
+        </div>
+        <div class="det-list" id="det-list"></div>
+      </aside>
+    </div>
+      <aside class="online-panel">
+        <div class="online-head">
+          <span class="live-dot"></span>
+          <span class="online-label">LIVE</span>
+        </div>
+        <div class="online-body">
+          <div class="online-glow"></div>
+          <div class="online-count" id="online-count">0</div>
+          <div class="online-sub">users currently online</div>
+          <div class="online-note">exclusively using cheats from this website</div>
+        </div>
+        <div class="online-wave">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <div class="down-overlay" id="reviews-down-overlay" style="display:none;">
+    <span class="down-badge">Currently Down</span>
+    <div class="down-title">Reviews are temporarily unavailable</div>
+    <p class="down-desc">Our backend is experiencing issues. Our team is working to resolve this as quickly as possible. Please be patient while we fix this problem.</p>
+  </div>
+  <section class="page" id="page-reviews">
+    <div class="page-head">
+      <h2 class="page-title">Reviews</h2>
+      <p class="page-sub">What our community says after the first game.</p>
+    </div>
+    <div class="reviews-summary">
+      <div class="rs-hero">
+        <div class="rs-left">
+          <span class="rs-num" id="rs-num">0.0</span>
+          <div class="stars" id="rs-stars"></div>
+          <span class="rs-count"><span id="rs-count">0</span> verified reviews</span>
+        </div>
+        <div class="rs-breakdown" id="rs-breakdown"></div>
+        <div class="rs-side">
+          <div class="rs-chip"><i></i>98% recommend</div>
+          <div class="rs-chip green"><i></i>verified purchases only</div>
+          <div class="rs-chip"><i></i>support replies &lt; 1h</div>
+        </div>
+      </div>
+    </div>
+    <div class="trust-strip">
+      <div class="t-stat"><b>24k+</b><span>keys sold</span></div>
+      <div class="t-stat"><b>99.2%</b><span>undetected rate</span></div>
+      <div class="t-stat"><b>&lt;1h</b><span>avg support reply</span></div>
+      <div class="t-stat"><b>4.9<i>/5</i></b><span>average rating</span></div>
+    </div>
+    <div class="rv-toolbar">
+      <div class="rv-filters" id="rv-filters">
+        <button class="rv-f on" data-f="all">All reviews</button>
+        <button class="rv-f" data-f="phobia">Phobia</button>
+        <button class="rv-f" data-f="cheats">Game cheats</button>
+        <button class="rv-f" data-f="software">Software</button>
+        <button class="rv-f" data-f="accounts">Accounts</button>
+      </div>
+      <div class="rv-pager">
+        <span class="rv-showing" id="rv-showing">2,431 reviews</span>
+        <button class="rv-page-btn" id="rv-prev" aria-label="Previous reviews">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <span class="rv-page-ind" id="rv-page-ind">1 / 271</span>
+        <button class="rv-page-btn" id="rv-next" aria-label="Next reviews">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="reviews-grid" id="reviews-grid"></div>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section class="page" id="page-dashboard">
+    <div class="dash-wrap">
+      <div class="dash-hero">
+        <div class="dash-user">
+          <div class="dash-avatar">N</div>
+          <div class="dash-user-info">
+            <div class="dash-welcome">Welcome back, <b id="dash-username">user</b></div>
+            <div class="dash-user-meta"><span class="dash-plan" id="dash-plan">CUSTOMER</span><span class="dash-since" id="dash-since">member since —</span></div>
+          </div>
+        </div>
+        <div class="dash-hero-actions">
+          <button class="btn btn-ghost" id="dash-login">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.32 4.37a19.8 19.8 0 0 0-4.89-1.52.07.07 0 0 0-.08.04c-.21.38-.44.87-.6 1.25a18.3 18.3 0 0 0-5.5 0 12.6 12.6 0 0 0-.61-1.25.08.08 0 0 0-.08-.04 19.7 19.7 0 0 0-4.88 1.52.07.07 0 0 0-.04.03C.53 9.05-.32 13.58.1 18.06c0 .02.01.04.03.05a19.9 19.9 0 0 0 6 3.03.08.08 0 0 0 .08-.02c.46-.63.87-1.3 1.22-2 .02-.04 0-.08-.04-.1a13 13 0 0 1-1.87-.9.08.08 0 0 1-.01-.12c.13-.1.25-.19.37-.29a.07.07 0 0 1 .08-.01 14.2 14.2 0 0 0 12.08 0 .07.07 0 0 1 .08.01c.12.1.25.2.37.29a.08.08 0 0 1-.01.13c-.6.35-1.22.64-1.88.89a.08.08 0 0 0-.04.1c.36.7.77 1.37 1.22 2 .02.03.04.04.08.03a19.8 19.8 0 0 0 6.02-3.03.08.08 0 0 0 .03-.05c.5-5.2-.84-9.68-3.55-13.66a.06.06 0 0 0-.03-.03zM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.96 2.42-2.16 2.42zm7.96 0c-1.18 0-2.15-1.08-2.15-2.42 0-1.33.95-2.42 2.15-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.95 2.42-2.16 2.42z"/>
+            </svg>
+            Login with Discord
+          </button>
+          <button class="btn btn-primary" id="dash-download-top">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Download Loader
+          </button>
+        </div>
+      </div>
+
+      <div class="dash-stats">
+        <div class="dash-stat reveal"><span class="ds-num"><b id="stat-subs">0</b></span><span class="ds-label">active subscriptions</span><i class="ds-ico up"></i></div>
+        <div class="dash-stat reveal"><span class="ds-num"><b id="stat-keys">0</b></span><span class="ds-label">keys generated</span><i class="ds-ico key"></i></div>
+        <div class="dash-stat reveal"><span class="ds-num"><b id="dash-days-protected" data-count="121">0</b></span><span class="ds-label">days protected</span><i class="ds-ico shield"></i></div>
+        <div class="dash-stat reveal"><span class="ds-num"><b id="dash-dl-count" data-count="0">0</b></span><span class="ds-label">downloads</span><i class="ds-ico dl"></i></div>
+      </div>
+
+      <div class="dash-tabs">
+        <button class="dash-tab on" data-dt="overview">Overview</button>
+        <button class="dash-tab" data-dt="tickets">Tickets</button>
+      </div>
+
+      <div class="dash-tab-page" id="dt-overview">
+        <div class="dash-row">
+          <div class="dash-card reveal dash-licenses">
+            <div class="dc-head">
+              <h3>Your licenses</h3>
+              <span class="dc-chip">3 active</span>
+            </div>
+            <div id="lic-list"></div>
+          </div>
+          <div class="dash-card reveal dash-loader">
+            <div class="dc-head"><h3>Loader</h3><span class="dc-chip green">v1.3.2</span></div>
+            <div class="loader-body">
+              <div class="loader-meta">
+                <span><i class="lm-k">size</i><b>4.2 MB</b></span>
+                <span><i class="lm-k">updated</i><b>2h ago</b></span>
+                <span><i class="lm-k">sig</i><b class="ok">verified</b></span>
+              </div>
+              <button class="btn btn-primary btn-block" id="dash-download">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Download Loader
+              </button>
+              <ol class="loader-steps">
+                <li>Run the loader as administrator</li>
+                <li>Paste your key from the licenses panel</li>
+                <li>Pick your game and inject</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-row">
+          <div class="dash-card reveal dash-activity">
+            <div class="dc-head"><h3>Recent activity</h3><span class="dc-chip">last 7 days</span></div>
+            <div class="act-list" id="act-list"></div>
+          </div>
+          <div class="dash-card reveal dash-usage">
+            <div class="dc-head"><h3>Usage</h3><span class="dc-chip">14d</span></div>
+            <div class="bar-chart" id="usage-chart"></div>
+            <div class="usage-foot"><span><b id="usage-total">0</b> total</span><span><b id="usage-avg">0</b> daily avg</span></div>
+          </div>
+        </div>
+
+        <div class="dash-row">
+          <div class="dash-card reveal dash-security">
+            <div class="dc-head"><h3>Security</h3><span class="dc-chip green">protected</span></div>
+            <div class="sec-row">
+              <div><b>Two-factor authentication</b><span>Extra code on every new login</span></div>
+              <button class="switch on" id="twofa-switch" aria-label="Toggle 2FA"><i></i></button>
+            </div>
+            <div class="sec-row">
+              <div><b>Login alerts</b><span>Email me on new device logins</span></div>
+              <button class="switch on" id="alerts-switch" aria-label="Toggle alerts"><i></i></button>
+            </div>
+            <div class="sess-head">Active sessions</div>
+            <div id="sess-list"></div>
+          </div>
+          <div class="dash-card reveal dash-tickets">
+            <div class="dc-head"><h3>Support tickets</h3><button class="dc-link" id="new-ticket-link">View all</button></div>
+            <div id="ticket-list"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dash-tab-page" id="dt-tickets" hidden>
+        <div class="dash-row tickets-row">
+          <div class="dash-card reveal dash-tickets-full">
+            <div class="dc-head"><h3>Support tickets</h3><button class="btn btn-primary btn-sm" id="new-ticket">New ticket</button></div>
+            <div class="user-ticket-subtabs" id="user-ticket-subtabs">
+              <button class="utst on" data-st="opened">Opened</button>
+              <button class="utst" data-st="closed">Closed</button>
+            </div>
+            <div id="ticket-full-list"></div>
+          </div>
+          <div class="dash-card reveal dash-ticket-chat" id="ticket-chat-panel" hidden>
+            <div class="dc-head">
+              <h3 id="ticket-chat-title">Ticket</h3>
+              <div style="display:flex;gap:8px;align-items:center">
+                <button class="btn btn-ghost danger btn-sm" id="user-ticket-close">Close ticket</button>
+                <button class="dc-link" id="ticket-chat-back">← Back to list</button>
+              </div>
+            </div>
+            <div class="tc-layout">
+              <div class="tc-chat-area">
+                <div class="ticket-chat-body" id="ticket-chat-body"></div>
+                <div class="ticket-chat-input" id="ticket-chat-input">
+                  <input class="co-input" id="ticket-reply-input" placeholder="Type a reply...">
+                  <button class="btn btn-primary btn-sm" id="ticket-reply-send">Send</button>
+                </div>
+              </div>
+              <div class="tc-profiles" id="tc-profiles"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticket-modal-overlay" id="ticket-modal-overlay" hidden>
+      <div class="ticket-modal ticket-wizard">
+        <div class="ticket-modal-head">
+          <h3>New support ticket</h3>
+          <button class="dc-link" id="ticket-modal-close">Close</button>
+        </div>
+
+        <div class="tw-steps">
+          <span class="tw-step on" data-s="1"><i>1</i>Product</span>
+          <em></em>
+          <span class="tw-step" data-s="2"><i>2</i>Problem</span>
+          <em></em>
+          <span class="tw-step" data-s="3"><i>3</i>Details</span>
+        </div>
+
+        <div class="tw-panel" id="tw-step1">
+          <h4 class="tw-h">What product is this about?</h4>
+          <div class="tw-product-grid" id="tw-product-grid"></div>
+        </div>
+
+        <div class="tw-panel" id="tw-step2" hidden>
+          <h4 class="tw-h">What's happening?</h4>
+          <div class="tw-issue-list" id="tw-issue-list">
+            <button class="tw-issue" data-issue="aimbot"><span class="tw-issue-ico">🎯</span><span>Aimbot not working</span></button>
+            <button class="tw-issue" data-issue="esp"><span class="tw-issue-ico">👁</span><span>ESP not showing</span></button>
+            <button class="tw-issue" data-issue="loader"><span class="tw-issue-ico">⚡</span><span>Loader crash / won't start</span></button>
+            <button class="tw-issue" data-issue="key"><span class="tw-issue-ico">🔑</span><span>Key not accepted</span></button>
+            <button class="tw-issue" data-issue="detected"><span class="tw-issue-ico">🛡</span><span>Game detected / ban</span></button>
+            <button class="tw-issue" data-issue="update"><span class="tw-issue-ico">🔄</span><span>Update issue</span></button>
+            <button class="tw-issue" data-issue="other"><span class="tw-issue-ico">💬</span><span>Other — describe your problem</span></button>
+          </div>
+          <div class="tw-custom-desc" id="tw-custom-desc" hidden>
+            <label>Describe your problem</label>
+            <textarea class="co-input" id="tw-desc-text" rows="3" placeholder="Tell us what happened..."></textarea>
+          </div>
+        </div>
+
+        <div class="tw-panel" id="tw-step3" hidden>
+          <h4 class="tw-h">Additional details</h4>
+          <div class="tw-upload-area" id="tw-upload-area">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Drop screenshots or videos here</span>
+            <span class="tw-upload-note">Optional — helps us diagnose the issue faster</span>
+            <input type="file" id="tw-file-input" multiple accept="image/*,video/*" hidden>
+          </div>
+          <div class="tw-file-list" id="tw-file-list"></div>
+          <div class="tw-divider"></div>
+          <div class="tw-freeze-row">
+            <label class="tw-freeze-label">
+              <input type="checkbox" id="tw-freeze-check">
+              <span>Freeze my key (optional)</span>
+            </label>
+            <p class="tw-freeze-hint">We'll pause your key while investigating so it stays safe.</p>
+            <div class="tw-freeze-input" id="tw-freeze-fields" hidden>
+              <input class="co-input" id="tw-freeze-key" placeholder="PASTE-KEY-XXXX-XXXX-XXXX">
+            </div>
+          </div>
+        </div>
+
+        <div class="ticket-modal-foot">
+          <button class="btn btn-ghost" id="tw-back">← Back</button>
+          <button class="btn btn-primary" id="tw-next">Continue</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKOUT -->
+  <section class="page" id="page-checkout">
+    <div class="co-wrap">
+      <div class="co-steps">
+        <span class="co-step on" data-s="1"><i>1</i>Review</span>
+        <em></em>
+        <span class="co-step" data-s="2"><i>2</i>Payment</span>
+        <em></em>
+        <span class="co-step" data-s="3"><i>3</i>Done</span>
+      </div>
+      <div class="co-panel" id="co-step1">
+        <h3 class="co-h">Review your order</h3>
+        <div id="co-items"></div>
+        <div class="co-total-row"><span>Total</span><b id="co-total">$0.00</b></div>
+        <div class="co-actions">
+          <button class="dc-link co-back" data-goto="products">← keep shopping</button>
+          <button class="btn btn-primary" id="co-continue">Continue to payment
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="co-panel" id="co-step2" hidden>
+        <h3 class="co-h">Payment method</h3>
+        <div class="co-methods" id="co-methods">
+          <button class="co-m on" data-c="paypal"><span class="co-m-logo pp">P</span>PayPal</button>
+          <button class="co-m" data-c="card"><span class="co-m-logo card-ic">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M2 10h20" stroke="currentColor" stroke-width="1.8"/></svg>
+          </span>Card</button>
+          <button class="co-m" data-c="paysafe"><span class="co-m-logo psc">PSC</span>paysafecard</button>
+          <button class="co-m" data-c="cashapp"><span class="co-m-logo ca">$</span>CashApp</button>
+          <button class="co-m" data-c="crypto"><span class="co-m-logo cry">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.9 8.6c-.1.4-.4.7-.9.8.6.2.9.6.9 1.3 0 1.1-.9 1.6-2.1 1.7v1.3h-.8v-1.2h-.7v1.2h-.8v-1.2H10v-.8h.6c.2 0 .3-.1.3-.3v-3.3c0-.2-.1-.3-.3-.3H10v-.8h2.4V8.2h.8v1.2h.7V8.2h.8v1.3c1.2.1 2.1.6 2.1 1.6v-.5zm-1.5 2.5c0-.5-.4-.7-1-.7h-1.2v1.5h1.2c.7 0 1-.3 1-.8zm-.2-2.2c0-.5-.3-.7-.9-.7h-1.1v1.4h1.1c.6 0 .9-.3.9-.7z"/></svg>
+          </span>Crypto</button>
+        </div>
+        <div class="co-paybox" id="co-paybox"></div>
+        <div class="co-actions">
+          <button class="btn btn-ghost" id="co-back2">Back</button>
+          <button class="btn btn-primary" id="co-pay-btn">Pay now</button>
+        </div>
+        <div class="co-secure">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 4v5c0 4.4-3 8.2-7 9-4-.8-7-4.6-7-9V7l7-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          256-bit encrypted checkout · keys delivered instantly
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- checkout success modal -->
+  <div class="co-modal-overlay" id="co-modal-overlay" hidden>
+    <div class="co-modal" id="co-modal">
+      <button class="co-modal-x" id="co-modal-x">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="co-check">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3 class="co-success-title">Payment verified</h3>
+      <p class="co-success-sub">Your license keys are ready and saved to your dashboard.</p>
+      <div id="co-keys"></div>
+      <div class="co-vouches" id="co-vouches"></div>
+      <div class="co-modal-actions">
+        <button class="btn btn-ghost" id="co-modal-close">Close</button>
+        <button class="btn btn-primary" id="co-modal-dash">Go to my dashboard</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMIN -->
+  <section class="page" id="page-admin">
+    <div class="dash-wrap">
+      <div class="admin-gate" id="admin-gate" hidden>
+        <div class="ag-lock">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8"/></svg>
+        </div>
+        <h3>Admin access only</h3>
+        <p>Log in with an authorized Discord account to manage the store.</p>
+        <button class="btn btn-primary" data-goto="dashboard">Go to login</button>
+      </div>
+      <div id="admin-panel" hidden>
+        <div class="admin-banner">
+          <span class="ab-shield">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 4v5c0 4.4-3 8.2-7 9-4-.8-7-4.6-7-9V7l7-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <div class="ab-text">
+            <b>Admin access panel</b>
+            <span>Full store control — orders, customers, licenses and detection status. Every action here is live on the site.</span>
+            <div class="ab-operators">
+              <span class="ab-op-label">operators</span>
+              <span class="ab-op">aidn</span>
+              <span class="ab-op">xida</span>
+              <span class="ab-op">xullify</span>
+            </div>
+          </div>
+        </div>
+        <div class="dash-stats">
+          <div class="dash-stat"><span class="ds-num"><b id="ad-orders">0</b></span><span class="ds-label">orders</span></div>
+          <div class="dash-stat"><span class="ds-num"><b id="ad-revenue">$0</b></span><span class="ds-label">revenue</span></div>
+          <div class="dash-stat"><span class="ds-num"><b id="ad-keys">0</b></span><span class="ds-label">keys issued</span></div>
+          <div class="dash-stat"><span class="ds-num"><b id="ad-users">0</b></span><span class="ds-label">customers</span></div>
+        </div>
+        <div class="admin-tabs">
+          <button class="ad-t on" data-t="orders">Orders</button>
+          <button class="ad-t" data-t="customers">Customers</button>
+          <button class="ad-t" data-t="keys">Keys</button>
+          <button class="ad-t" data-t="tickets">Tickets</button>
+          <button class="ad-t" data-t="detection">Detection</button>
+          <button class="ad-t" data-t="notifications">Notifications</button>
+        </div>
+        <div class="ad-page" id="ad-page-orders">
+          <div class="dash-card">
+            <div class="dc-head"><h3>Recent orders</h3><span class="dc-chip" id="ad-order-count">0</span></div>
+            <div class="ad-table-head"><span>Order</span><span>Customer</span><span>Items</span><span>Date</span><span class="ta-r">Total</span></div>
+            <div id="ad-order-list"></div>
+          </div>
+        </div>
+        <div class="ad-page" id="ad-page-customers" hidden>
+          <div class="dash-card">
+            <div class="dc-head"><h3>Customers</h3><span class="dc-chip" id="ad-user-count">0</span></div>
+            <div id="ad-user-list"></div>
+          </div>
+        </div>
+        <div class="ad-page" id="ad-page-keys" hidden>
+          <div class="dash-row">
+            <div class="dash-card">
+              <div class="dc-head"><h3>Key generator</h3></div>
+              <div class="ad-gen">
+                <div id="ad-gen-product"></div>
+                <div id="ad-gen-period"></div>
+                <button class="btn btn-primary btn-block" id="ad-gen-btn">Generate key</button>
+                <code class="ad-gen-out" id="ad-gen-out" hidden></code>
+                <button class="dc-link" id="ad-gen-copy" hidden>copy key</button>
+              </div>
+            </div>
+            <div class="dash-card">
+              <div class="dc-head"><h3>Key control</h3><span class="dc-chip" id="ad-frozen-count">0 frozen</span></div>
+              <div class="ad-gen">
+                <input class="co-input" id="ad-kc-key" placeholder="PASTE-KEY-XXXX-XXXX-XXXX">
+                <div class="ad-kc-row">
+                  <button class="btn btn-ghost" id="ad-kc-freeze">Freeze key</button>
+                  <button class="btn btn-ghost" id="ad-kc-unfreeze">Unfreeze key</button>
+                  <button class="btn btn-ghost danger" id="ad-kc-remove">Remove key</button>
+                </div>
+                <p class="ad-kc-note">Frozen keys stop working until unfrozen. Removed keys are permanently revoked and deleted from the user's dashboard.</p>
+                <div id="ad-kc-status"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ad-page" id="ad-page-tickets" hidden>
+          <div class="dash-card">
+            <div class="dc-head"><h3>Support tickets</h3><span class="dc-chip" id="ad-ticket-count">0</span></div>
+            <div class="ad-ticket-subtabs" id="ad-ticket-subtabs">
+              <button class="ad-tst on" data-st="opened">Opened</button>
+              <button class="ad-tst" data-st="closed">Closed</button>
+            </div>
+            <div id="ad-ticket-list"></div>
+          </div>
+          <div class="dash-card" id="ad-ticket-chat-card" hidden>
+            <div class="dc-head">
+              <h3 id="ad-ticket-chat-title">Ticket</h3>
+              <div style="display:flex;gap:8px;align-items:center">
+                <button class="btn btn-ghost danger btn-sm" id="ad-ticket-close">Close ticket</button>
+                <button class="dc-link" id="ad-ticket-chat-back">← Back to list</button>
+              </div>
+            </div>
+            <div class="ad-ticket-chat-body" id="ad-ticket-chat-body"></div>
+            <div class="ticket-chat-input" id="ad-ticket-chat-input">
+              <input class="co-input" id="ad-ticket-reply-input" placeholder="Reply as support...">
+              <button class="btn btn-primary btn-sm" id="ad-ticket-reply-send">Send</button>
+            </div>
+          </div>
+        </div>
+        <div class="ad-page" id="ad-page-detection" hidden>
+          <div class="dash-card">
+            <div class="dc-head"><h3>Detection status</h3><span class="dc-chip">live on status page</span></div>
+            <div id="ad-det-list"></div>
+          </div>
+        </div>
+        <div class="ad-page" id="ad-page-notifications" hidden>
+          <div class="dash-card">
+            <div class="dc-head"><h3>Admin notification history</h3><span class="dc-chip" id="ad-notif-count">0</span></div>
+            <div id="ad-notif-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>© 2026 Linear Studio. All rights reserved.</span>
+    <span class="footer-tag">Cheating Excellence · <span class="foot-dot"></span> Live</span>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cart-overlay"></div>
+<aside class="cart" id="cart">
+  <div class="cart-head">
+    <h3>Your Cart</h3>
+    <button class="cart-close" id="cart-close">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="cart-body" id="cart-body">
+    <div class="cart-empty">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 4h2l2.4 12.2a1.5 1.5 0 0 0 1.47 1.3h8.86a1.5 1.5 0 0 0 1.46-1.17L21 8H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="9.5" cy="21" r="1.3" fill="currentColor"/>
+        <circle cx="17.5" cy="21" r="1.3" fill="currentColor"/>
+      </svg>
+      <p>Your cart is empty.</p>
+      <a href="#" class="btn btn-primary btn-sm" data-goto="products">Browse Products</a>
+    </div>
+  </div>
+  <div class="cart-foot" id="cart-foot" hidden>
+    <div class="cart-total-row"><span>Total</span><span id="cart-total">$0.00</span></div>
+    <button class="btn btn-primary btn-block" id="checkout-btn">Checkout — Discord</button>
+  </div>
+</aside>
+
+<script src="js/main.js?v=6"></script>
+</body>
+</html>
