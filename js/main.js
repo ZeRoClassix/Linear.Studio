@@ -814,6 +814,7 @@ const GALLERIES = {
   "phobia-r6": [
     "external/productsPIC/games/RainbowSix_edit_v2.png",
     "external/GAME%20PICS/rainbowSix/Phobia/phobia%20menu.png",
+    "external/GAME%20PICS/rainbowSix/Phobia/uaPhobia.png",
     "external/GAME%20PICS/rainbowSix/Phobia/Tom%20Clancy%27s%20Rainbow%20Six%20%20Siege%20Screenshot%202026.09.05%20-%2015.28.56.76.png",
     "external/GAME%20PICS/rainbowSix/Phobia/Tom%20Clancy%27s%20Rainbow%20Six%20%20Siege%20Screenshot%202026.09.05%20-%2015.31.26.42.png",
     "external/GAME%20PICS/rainbowSix/Phobia/Tom%20Clancy%27s%20Rainbow%20Six%20%20Siege%20Screenshot%202026.09.05%20-%2015.34.09.67.png",
