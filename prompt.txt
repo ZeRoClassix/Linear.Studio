@@ -1,1 +1,0 @@
-great!!1 now its working perfectly! now i want u to make it so when i remove a key for example my key it will actually get removed from my account, if i freeze it then it will say FROZEN in my dashboard for keys
